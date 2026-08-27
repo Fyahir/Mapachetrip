@@ -1,0 +1,563 @@
+<!-- Bautista Olivares Francisco Yahir -->
+<!-- Nephtali Castañeda Nuñez -->
+<!--Martinez Ramirez Evelyn Maggali -->
+<!DOCTYPE html>
+<html lang="es-MX">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>MAPACHETRIP</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <!-- owl stylesheets --> 
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <script src="../Mapachetrip/js/extras.js"></script>
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+       
+  <!--  chatbot pedro -->
+  <button class="chatbot-toggle" onclick="toggleChatbot()">Chat con<br>Mapache Pedro</button>
+
+  <!-- preguntas para pedro -->
+  <div class="chatbot-container" id="chatbot-container">
+      <div class="chatbot-header">
+          <img src="images/pedro.gif" alt="Mapache" width="100" height="100" class="chatbot-icon"> 
+          <h3>Mapache Pedro</h3>
+          <button class="close-chatbot" onclick="toggleChatbot()">X</button>
+      </div>
+      <div class="chatbot-window" id="chatbot-window">
+          <div class="message bot-message">¡Hola! Soy Pedro el Mapache. ¿En qué puedo ayudarte hoy?</div>
+          <div class="message bot-message" id="chatbot-options">
+              <button onclick="handleOption('mapachetrip')">¿Qué es MapacheTrip?</button>
+              <button onclick="handleOption('paises')">¿A qué países puedo ir con MapacheTrip?</button>
+              <button onclick="handleOption('contacto')">¿Cómo contacto a MapacheTrip?</button>
+              <button onclick="handleOption('creadores')">¿Quienes crearon MapacheTrip?</button>
+          </div>
+      </div>
+  </div>
+
+
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="header">
+            <div class="header_white_section">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="header_information">
+                           <ul>
+                              <li><img src="images/1.png" alt="#"/> ESIME ZACATENCO</li>
+                              <li><img src="images/2.png" alt="#"/> +52 7291027627</li>
+                              <li><img src="images/3.png" alt="#"/> mapachetrip@gmail.com</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="Logo MAPACHETRIP" width="100" height="100"></a> </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <div class="menu-area">
+                        <div class="limit-box">
+                           <nav class="main-menu">
+                              <ul class="menu-area-main">
+                                 <li class="active"> <a href="index.html">Home</a> </li>
+                                 <li> <a href="#about">Acerca de nosotros</a> </li>
+                                 <li><a href="#travel">Destinos</a></li>
+                                 <li><a href="#blog">Clientes</a></li>
+                                 <li><a href="#contact">REGISTRATE</a></li>
+                              </ul>
+                           </nav>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- end header inner -->
+      </header>
+      <!-- end header -->
+      <section >
+         <div class="banner-main">
+            <img src="images/banner.jpg" alt="#"/>
+            <div class="container">
+               <div class="text-bg">
+                  <h1>BIENVENIDO A<br><strong class="white">MAPACHETRIP</strong></h1>
+                  <div class="button_section"> <a class="main_bt" href="#about">Acerca de nosotros</a>  </div>
+                  <div class="container">
+                     <form class="main-form">
+                        <h3>Encuentra tu destino</h3>
+                     <div>
+                        <div class="row">
+                           <div class="col-md-9"> 
+                              <div class="row">
+                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12"> 
+                                    <label for="destino">Busca tu destino</label>
+                                    <select class="form-control" name="destino" id="destino">
+                                        <option value="germany">Alemania</option>
+                                        <option value="france">Francia</option>
+                                        <option value="spain">España</option>
+                                        <option value="usa">Estados Unidos</option>
+                                        <option value="japan">Japon</option>
+                                        <option value="italy">Italia</option>
+                                        <option value="uk">Reino Unido</option>
+                                    </select>
+                                 </div>
+                 
+                                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 d-flex align-items-end">
+                                    <a href="#" id="botonBuscar" class="btn btn-primary">BUSCAR</a>
+                                 </div> 
+                 
+
+                              </div>
+                           </div>     
+                        </div>
+                        
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- about -->
+      <div id="about" class="about">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 ">
+                  <div class="titlepage">
+                     <h2>ACERCA DE NUESTRA AGENCIA</h2>
+                     <span> Mapachetrip es una agencia de viajes orgullosamente mexicana creada por estudiantes del Instituto Politécnico Nacional, fundada con el objetivo de conectar a los viajeros con los destinos más fascinantes y auténticos en el mundo.
+                        Desde paises con playas paradisíacas hasta paises con majestuosas montañas, desde paises con exóticas selvas hasta ciudades vibrantes, ¡te llevaremos a lugares que solo has soñado!
+                     </span>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="bg">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                     <div class="about-box">
+                        <p> <span>En Mapachetrip, nuestra misión es ofrecer servicios de viajes de alta calidad que superen las expectativas de nuestros clientes.
+                            Queremos que cada cliente se sienta valorado y bien atendido desde el momento en que se pone en contacto con nosotros hasta que regresa a casa. 
+                            Nos esforzamos por ofrecer una atención personalizada,
+                             entendiendo y satisfaciendo las necesidades y deseos individuales de cada viajero.</span></p>
+                        <div class="palne-img-area">
+                           <img src="images/plane-img2.png" alt="images" width="670" height="497">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <a href="#contact">Contáctanos</a>
+         </div>
+      </div>
+      <!-- end about -->
+      <!-- traveling -->
+      <div id="travel" class="traveling">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 ">
+                  <div class="titlepage">
+                     <h2>VIAJA A DONDE TÚ QUIERAS</h2>
+                     <span>Nos esforzamos por llevarte a donde desees. Tenemos destinos en diferentes países de diversos continentes.</span> 
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                  <div class="traveling-box">
+                     <i><img src="icon/Word.jpeg" alt="icon"/></i>
+                     <h3>Todo el mundo</h3>
+                     <p>Todos los países a los que podemos llevarte.</p>
+                  <!--   <div class="read-more">
+                        <a  href="#">Ver todos</a>
+                     </div>-->
+                  </div>
+               </div>
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                  <div class="traveling-box">
+                     <i><img src="icon/Europe.jpeg" alt="icon"/></i>
+                     <h3>Europa</h3>
+                     <p> Haz tu sueño de un Eurotrip realidad.</p>
+                 <!--    <div class="read-more">
+                        <a  href="#">Ver Europa</a>
+                     </div>-->
+                  </div>
+               </div>
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                  <div class="traveling-box">
+                     <i><img src="icon/asia.jpeg" alt="icon"/></i>
+                     <h3>Asia</h3>
+                     <p> Busca una experiencia en el continente asiático.</p>
+                  <!--   <div class="read-more">
+                        <a  href="#">Ver Asia</a>
+                     </div> -->
+                  </div>
+               </div>
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                  <div class="traveling-box">
+                     <i><img src="icon/America.jpeg" alt="icon"/></i>
+                     <h3>America</h3>
+                     <p> Busca tu destino por el contienete americano. </p>
+                 <!--    <div class="read-more">
+                        <a  href="#">Ver America</a>
+                     </div>-->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end traveling -->
+      <!--Paquetes -->
+      <div class="London">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>NOS ADAPTAMOS A TU PRESUPUESTO</h2>
+                     <span>
+                        En Mapachetrip, entendemos que cada viajero es único, al igual que sus presupuestos.
+                         Nuestro compromiso es ofrecer la mejor experiencia de viaje adaptándonos a tus necesidades financieras.
+                     </span> 
+                  </div>
+               </div>
+            </div>
+         </div>
+
+
+            <div class="container">
+
+               <div class="row">
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12"> 
+                     <div class="traveling-box">
+                        <i><img src="icon/bajocosto.jpeg" alt="icon" width="250" height="250"></i>
+                        <h3>Plan Explorador Ahorro</h3>
+                        <p>Ideal para los viajeros que desean disfrutar sin gastar de más.</p>
+                        <br>
+                        <h3>¿Qué Incluye?</h3>
+                        <li>Vuelos de ida y vuelta (clase turista).</li>
+                        <li>Alojamiento en hoteles de 3 estrellas.</li>
+                        <li>Desayuno diario.</li>
+                        <li>Posibles visitas guiadas.</li>
+                     </div>
+                  </div>
+
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12"> 
+                     <div class="traveling-box">
+                        <i><img src="icon/media.jpeg" alt="icon" width="250" height="250"></i>
+                        <h3>Plan Aventurero Plus</h3>
+                        <p> Perfecto para quienes buscan una experiencia equilibrada de confort y aventura.</p>
+                        
+                        <h3>¿Qué Incluye?</h3> 
+                           <li>Vuelos de ida y vuelta (clase turista)</li>
+                           <li>Alojamiento en hoteles de 4 estrellas</li>
+                           <li>Desayuno diario y una cena de bienvenida</li>
+                           <li>Visitas guiadas</li>
+                     </div>
+                  </div>
+
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12"> 
+                     <div class="traveling-box">
+                        <i><img src="icon/altagama.jpeg" alt="icon" width="250" height="250"></i>
+                        <h3>Plan Élite Premium</h3>
+                        <p> Para aquellos que desean explorar con lujo y exclusividad.</p><br>
+                        <h3>¿Qué Incluye?</h3> 
+                        <li>Vuelos de ida y vuelta en clase VIP</li>
+                        <li>Alojamiento en hoteles de 5 estrellas</li>
+                        <li>Desayuno diario y cenas gourmet</li>
+                        <li>Visitas guiadas</li>
+                        <li>Seguro de viaje</li>
+                        <li>Transporte privado con chofer</li>
+                     </div>
+                  </div>
+               </div>
+               <div class="button_section" style="text-align: center;">
+                  <a class="main_bt" href="#contact">Contáctanos</a>
+              </div>
+            </div>
+      </div>
+      <!-- end paquetes -->
+      <!--Tours -->
+      <div class="Tours">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Los destinos más populares</h2>
+                        <span>
+                        Descubre los destinos más populares del planeta con Mapachetrip. Desde las luces brillantes de las ciudades hasta las maravillas naturales.
+                         ¡Prepárate para vivir experiencias inolvidables en lugares que no puedes perderte!"
+                        </span>
+                     
+                  </div>
+               </div>
+            </div>
+            <section id="demos">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="owl-carousel owl-theme">
+                        <div class="item">
+                           <img class="img-responsive" src="images/venecia.jpg" alt="#" />
+                           <h3>Italia</h3>
+                           <p>Desde las antiguas ruinas de Roma hasta los canales de Venecia y las costas soleadas de la costa amalfitana,
+                               Italia ofrece una experiencia inigualable llena de arte, cultura y deliciosa gastronomía.</p>
+                        </div>
+                        <div class="item">
+                           <img class="img-responsive" src="images/paris.jpg" alt="#" />
+                           <h3>Francia</h3>
+                           <p>Descubre la elegancia y el encanto de Francia. Recorre las calles empedradas de París, 
+                              explora los viñedos de la región de Borgoña y maravíllate con los majestuosos castillos del Valle del Loira.
+                               Francia te espera con su exquisita gastronomía y su rica historia</p>
+                        </div>
+                        <div class="item">
+                           <img class="img-responsive" src="images/tokio.jpg" alt="#" />
+                           <h3>Japón</h3>
+                           <p>Desde la bulliciosa metrópolis de Tokio hasta los tranquilos templos de Kioto y los espectaculares paisajes de Hakone, 
+                              Japón ofrece una mezcla única de tradición y modernidad que cautiva a los viajeros de todo el mundo</p>
+                        </div>
+                        <div class="item">
+                           <img class="img-responsive" src="images/2.jpg" alt="#" />
+                           <h3>Estados Unidos</h3>
+                           <p>Desde los rascacielos de Nueva York hasta las playas de California y los parques naturales del Gran Cañón, 
+                              Estados Unidos ofrece una variedad de experiencias que satisfacen todos los gustos.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </div>
+      </div>
+      <!-- end Tours -->
+      <!-- Amazing -->
+      <div class="container-fluid">
+         <div class="London-img">
+            <figure><img src="images/mpachesFondo.png" alt="img" width="1019" height="360"></figure>
+         </div>
+      </div>
+      <!-- end Amazing -->
+      <!-- our blog -->
+      <div id="blog" class="blog">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Nuestros Clientes</h2>
+                     <span>
+                        Descubre las historias de éxito y aventuras de nuestros apreciados clientes,
+                         quienes han confiado en Mapachetrip para hacer realidad sus sueños de viaje.
+                         ¡Únete a nuestra comunidad de viajeros satisfechos!
+                     </span> 
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                  <div class="blog-box">
+                     <figure><img src="images/nata.jpeg" alt="#" width="500" height="150">
+                        <span>02 Feb 2024</span>
+                     </figure>
+                     <div class="travel">
+                        <span>Post  By :  Mapachetrip Agencia de Viajes</span> 
+                        <p><strong class="Comment"> 123 </strong>  Comentarios</p>
+                        <p><strong class="like">5,231 </strong>Likes</p>
+                     </div>
+                     <h3>Natanael en Italia</h3>
+                     <p>"Mi viaje a Italia con Mapachetrip fue una experiencia inolvidable. Desde el principio,
+                         su equipo se mostró atento y dispuesto a personalizar mi itinerario según mis intereses. 
+                         Los detalles, como los tours guiados por expertos locales y las recomendaciones de restaurantes auténticos, 
+                         realmente hicieron la diferencia. Además, la comodidad de tener todo planificado por adelantado me permitió relajarme 
+                         y disfrutar plenamente del viaje.
+                         Definitivamente consideraría viajar con ellos nuevamente en el futuro."</p>
+
+                  </div>
+               </div>
+               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                  <div class="blog-box">
+                     <figure><img src="images/kayne.jpg" alt="#" width="500" height="150">
+                        <span>15 Enero 2024</span>
+                     </figure>
+                     <div class="travel">
+                        <span>Post  By :   Mapachetrip Agencia de Viajes</span> 
+                        <p><strong class="Comment"> 86 </strong>  Comentarios</p>
+                        <p><strong class="like">2,321 </strong>Likes</p>
+                     </div>
+                     <h3>Kevin y Tania en Japón</h3>
+                     <p>"Nuestro viaje familiar a Japón con Mapachetrip superó todas nuestras expectativas.
+                         La atención personalizada y la flexibilidad para adaptar el itinerario a nuestras necesidades fueron aspectos destacados. 
+                         Los guías locales eran conocedores y amables, lo que agregó un valor significativo a nuestras visitas a lugares emblemáticos.
+                        Apreciamos mucho el apoyo continuo del equipo de Mapachetrip antes y durante el viaje. 
+                        Sin duda, recomendaría sus servicios a cualquiera que busque una experiencia de viaje auténtica y sin complicaciones."</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end our blog -->
+<!-- registro -->
+<footer>
+   <div id="contact" class="footer">
+       <div class="container">
+           <div class="row pdn-top-30">
+               <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                   <ul class="location_icon">
+                       <li><a href="https://www.facebook.com"><img src="icon/facebook.png"></a></li>
+                       <li><a href="https://x.com/?lang=es"><img src="icon/Twitter.png"></a></li>
+                       <li><a href="https://mx.linkedin.com"><img src="icon/linkedin.png"></a></li>
+                       <li><a href="https://www.google.com/intl/es-419/gmail/about/"><img src="icon/instagram.png"></a></li>
+                   </ul>
+               </div>
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                   <div class="Follow">
+                       <h3>CONTACTANOS</h3>
+                       <span>
+                           Unidad Profesional, Av. Luis Enrique Erro, Adolfo López Mateos S/N <br>
+                           Zacatenco, Gustavo A. Madero<br>
+                           07738 Ciudad de México <br>
+                           +52 7291027627
+                       </span>
+                   </div>
+               </div>
+               <!-- formulario -->
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                   <img src="images/logo.png" alt="Logo MAPACHETRIP" width="300" height="300">
+               </div>
+               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                   <div class="Follow">
+                       <h3> REGISTRATE</h3>
+                       <span> ¡Nos contactaremos contigo para darte tu mejor viaje! </span>
+                       <form action="RegistroMapache.php" method="post"> 
+                           <div class="row">
+                               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                   <input class="Newsletter" placeholder="Nombre" type="text" name="nombre">
+                               </div>
+                               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                   <input class="Newsletter" placeholder="Email" type="email" name="email">
+                               </div>
+
+                               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                   <select class="Newsletter" name="pais">
+                                       <option value="" disabled selected>País</option>
+                                       <option value="germany">Alemania</option>
+                                       <option value="france">Francia</option>
+                                       <option value="spain">España</option>
+                                       <option value="usa">Estados Unidos</option>
+                                       <option value="japan">Japon</option>
+                                       <option value="italy">Italia</option>
+                                       <option value="uk">Reino Unido</option>
+                                   </select>
+                               </div>
+
+                               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                   <select class="Newsletter" name="num_personas">
+                                       <option value="" disabled selected>Número de personas</option>
+                                       <option value="1">1</option>
+                                       <option value="2">2</option>
+                                       <option value="3">3</option>
+                                       <option value="4">4</option>
+                                       <option value="5">+5</option>
+                                   </select>
+                               </div>
+
+                               <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                   <select class="Newsletter" name="tipo_paquete">
+                                       <option value="" disabled selected>Tipo de paquete</option>
+                                       <option value="explorador">Plan Explorador Ahorro - $</option>
+                                       <option value="aventurero">Plan Aventurero Plus  - $$</option>
+                                       <option value="elite">Plan Élite Premium  - $$$</option>
+                                   </select>
+                               </div>
+
+                               <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                   <textarea class="textarea" placeholder="Comentario" name="comentario"></textarea>
+                               </div>
+                           </div>
+                           <button class="Subscribe" type="submit" name="submit">Enviar</button>
+                       </form>
+                   </div>
+               </div>
+           </div>
+           <div class="copyright">
+               <div class="container">
+                   <p> 2024 By Mapachetrip Agencia de Viajes <br>
+                   </p>
+               </div>
+           </div>
+       </div>
+   </div>
+</footer>
+<!-- end registro -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script>
+         $(document).ready(function() {
+           var owl = $('.owl-carousel');
+           owl.owlCarousel({
+             margin: 10,
+             nav: true,
+             loop: true,
+             responsive: {
+               0: {
+                 items: 1
+               },
+               600: {
+                 items: 2
+               },
+               1000: {
+                 items: 3
+               }
+             }
+           })
+         })
+      </script>
+     
+      
+
+
+   </body>
+</html>
